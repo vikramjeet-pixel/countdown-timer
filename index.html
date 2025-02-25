@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Countdown Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="ai">
+    <div class="theme-toggle">
+        <button id="theme-btn">Switch Theme</button>
+    </div>
+    <div class="timer-container">
+        <h1>AI Countdown Nexus</h1>
+        <div class="event-section">
+            <label for="event-select">Choose Event:</label>
+            <select id="event-select">
+                <option value="newyear">New Year</option>
+                <option value="birthday">Birthday</option>
+                <option value="launch">Product Launch</option>
+                <option value="custom">Custom</option>
+            </select>
+        </div>
+        <div class="custom-section">
+            <h2>Set Custom Timer</h2>
+            <div class="custom-inputs">
+                <input type="number" id="days" placeholder="Days" min="0">
+                <input type="number" id="hours" placeholder="Hours" min="0" max="23">
+                <input type="number" id="minutes" placeholder="Minutes" min="0" max="59">
+                <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+                <button id="set-custom-btn">Set Timer</button>
+            </div>
+        </div>
+        <div class="timer-display">
+            <svg class="progress-ring" width="320" height="320">
+                <circle class="progress-ring__circle" stroke="var(--progress-color)" stroke-width="12" fill="transparent" r="150" cx="160" cy="160"/>
+            </svg>
+            <div class="time">
+                <div><span id="days-display">00</span><small>Days</small></div>
+                <div><span id="hours-display">00</span><small>Hours</small></div>
+                <div><span id="minutes-display">00</span><small>Minutes</small></div>
+                <div><span id="seconds-display">00</span><small>Seconds</small></div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn">Start</button>
+            <button id="pause-btn" disabled>Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <p id="status" class="status"></p>
+    </div>
+    <div id="confetti-container" class="confetti-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
